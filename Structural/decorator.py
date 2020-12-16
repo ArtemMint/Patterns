@@ -18,9 +18,11 @@ class Plan:
     def fly(self):
         print(f'{self._human._name} fly on the plan.')
 
+def main():
+    man = Human('James')
+    plan = Plan(man)
+    plan.say()
+    plan.fly()
 
-man = Human('James')
-
-plan = Plan(man)
-plan.say()
-plan.fly()
+if __name__ == '__main__':
+    main()
