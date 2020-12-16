@@ -9,18 +9,18 @@ class Mediator(ABC):
     pass the execution to other components.
     """
 
-    def notify(self, sender: object, event: str) -> None:
+    def notify(self, sender: object, event: str):
         pass
 
 
 class ConcreteMediator(Mediator):
-    def __init__(self, component1: Component1, component2: Component2) -> None:
+    def __init__(self, component1: Component1, component2: Component2):
         self._component1 = component1
         self._component1.mediator = self
         self._component2 = component2
         self._component2.mediator = self
 
-    def notify(self, sender: object, event: str) -> None:
+    def notify(self, sender: object, event: str):
         if event == "A":
             print("Mediator reacts on A and triggers following operations:")
             self._component2.do_c()
@@ -36,40 +36,34 @@ class BaseComponent:
     instance inside component objects.
     """
 
-    def __init__(self, mediator: Mediator = None) -> None:
+    def __init__(self, mediator: Mediator = None):
         self._mediator = mediator
 
     @property
-    def mediator(self) -> Mediator:
+    def mediator(self):
         return self._mediator
 
     @mediator.setter
-    def mediator(self, mediator: Mediator) -> None:
+    def mediator(self, mediator: Mediator):
         self._mediator = mediator
 
 
-"""
-Concrete Components implement various functionality. They don't depend on other
-components. They also don't depend on any concrete mediator classes.
-"""
-
-
 class Component1(BaseComponent):
-    def do_a(self) -> None:
+    def do_a(self):
         print("Component 1 does A.")
         self.mediator.notify(self, "A")
 
-    def do_b(self) -> None:
+    def do_b(self):
         print("Component 1 does B.")
         self.mediator.notify(self, "B")
 
 
 class Component2(BaseComponent):
-    def do_c(self) -> None:
+    def do_c(self):
         print("Component 2 does C.")
         self.mediator.notify(self, "C")
 
-    def do_d(self) -> None:
+    def do_d(self):
         print("Component 2 does D.")
         self.mediator.notify(self, "D")
 
