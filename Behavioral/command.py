@@ -37,8 +37,11 @@ class Switch(object):
     def off(self):
         self.off_cmd.execute()
 
+def main():
+    light = Light()
+    switch = Switch(on_cmd=TurnOnLightCommand(light), off_cmd=TurnOffLightCommand(light))
+    switch.on()
+    switch.off()
 
-light = Light()
-switch = Switch(on_cmd=TurnOnLightCommand(light), off_cmd=TurnOffLightCommand(light))
-switch.on()
-switch.off()
+if __name__ == '__main__':
+    main()
