@@ -1,2 +1,8 @@
+#Virtual env
 /venv
+
+#?
 /.idea
+
+#gitignore
+.gitignore
