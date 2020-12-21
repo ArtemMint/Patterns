@@ -3,12 +3,6 @@ from abc import ABC
 
 
 class Mediator(ABC):
-    """
-    The Mediator interface declares a method used by components to notify the
-    mediator about various events. The Mediator may react to these events and
-    pass the execution to other components.
-    """
-
     def notify(self, sender: object, event: str):
         pass
 
@@ -31,10 +25,6 @@ class ConcreteMediator(Mediator):
 
 
 class BaseComponent:
-    """
-    The Base Component provides the basic functionality of storing a mediator's
-    instance inside component objects.
-    """
 
     def __init__(self, mediator: Mediator = None):
         self._mediator = mediator
@@ -69,15 +59,12 @@ class Component2(BaseComponent):
 
 
 if __name__ == "__main__":
-    # The client code.
     c1 = Component1()
     c2 = Component2()
     mediator = ConcreteMediator(c1, c2)
 
     print("Client triggers operation A.")
     c1.do_a()
-
-    print("\n", end="")
 
     print("Client triggers operation D.")
     c2.do_d()

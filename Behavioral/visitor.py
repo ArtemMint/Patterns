@@ -9,13 +9,13 @@ class FruitVisitor(object):
         draw(fruit)
 
     def draw_apple(self, fruit):
-        print('An apple')
+        print('Drawing an apple')
 
     def draw_pear(self, fruit):
-        print('A pear')
+        print('Drawing a pear')
 
     def draw_unknown(self, fruit):
-        print('Some fruit')
+        print('Drawing some fruit')
 
 class Fruit(object):
     """Class Fruit"""
