@@ -5,7 +5,7 @@ class Singleton(object):
             print('Creating new instance of class...')
             cls.__instance = super(Singleton, cls).__new__(cls)
         else:
-            print('Class already has instance')
+            print('Class already had instance')
         return cls.__instance
 
 
