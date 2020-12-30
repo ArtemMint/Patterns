@@ -15,7 +15,7 @@ class Fish():
         print(f'Fish name is - {self._name}')
 
 class Plan:
-    """Class Plan"""
+    """Decorator Plan"""
     def __init__(self, human):
         self._human = human
 
@@ -28,9 +28,11 @@ class Plan:
 def main():
     man = Human('James')
     fish = Fish('Bob')
+
     plan = Plan(man)
     plan.say()
     plan.fly()
+
     plan = Plan(fish)
     plan.say()
     plan.fly()

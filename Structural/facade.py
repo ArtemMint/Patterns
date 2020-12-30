@@ -32,11 +32,15 @@ class Facade(object):
 
 def main():
     f = Facade()
+
     f.write('First text!')
     f.write('Second text!')
 
 if __name__ == '__main__':
     main()
+
+
+
 
 """
 Регистрация пользователя, удобное обращение к подсистемам без уведомления пользователя о подробностях

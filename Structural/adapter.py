@@ -25,8 +25,8 @@ def main():
     num_to_str = NumberToStringAdapter()
 
     print('Return:' + string.get())
-    #print('Return:' + number.get())
-    print('Return:' + num_to_str.get())
+    print('Return:' + number.get())
+    #print('Return:' + num_to_str.get())
 
 if __name__ == '__main__':
     main()
