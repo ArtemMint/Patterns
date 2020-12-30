@@ -46,3 +46,8 @@ class Image(object):
 Image.open('picture.png')
 Image.open('picture.jpg')
 Image.open('picture.gif')
+
+'''
+Отрисовка маршрута на карте.
+Выбор типа сортировки, тема приложения.
+'''

@@ -5,7 +5,7 @@ class AbstractTV(object):
 
 
 class SonyTV(AbstractTV):
-    """TV So"""
+    """TV Sony"""
     def tune_channel(self, channel):
         print(f'Sony TV: chosen {channel} channel')
 
@@ -50,3 +50,9 @@ def main():
 
     if __name__ == '__main__':
         main()
+
+
+
+"""
+Разделение интерфейса от реализации.
+"""

@@ -14,7 +14,7 @@ class ExampleBase(object):
         raise NotImplementedError()
 
 
-class Example(ExampleBase):
+class Example1(ExampleBase):
     def step_one(self):
         print('First step')
 
@@ -24,6 +24,23 @@ class Example(ExampleBase):
     def step_three(self):
         print('Third step')
 
+class Example2(ExampleBase):
+    def step_one(self):
+        print('Another first step')
 
-example = Example()
+    def step_two(self):
+        print('Another second step')
+
+    def step_three(self):
+        print('Another third step')
+
+
+example = Example1()
 example.template_method()
+print('\n')
+example = Example2()
+example.template_method()
+
+"""
+Разные алгоритмы чтения документов.
+"""

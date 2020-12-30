@@ -42,3 +42,7 @@ if __name__ == '__main__':
 
     banana = Banana()
     banana.draw(visitor)
+
+"""
+Експорт обьектов в XML
+"""

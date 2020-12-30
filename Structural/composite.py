@@ -29,23 +29,23 @@ class Text(Graphic):
 
 class Picture(Graphic):
     def __init__(self):
-        self._children = []
+        self._list = []
 
     def draw(self):
         print('Picture')
-        for obj in self._children:
+        for obj in self._list:
             obj.draw()
 
     def add(self, obj):
-        if isinstance(obj, Graphic) and not obj in self._children:
-            self._children.append(obj)
+        if isinstance(obj, Graphic) and not obj in self._list:
+            self._list.append(obj)
 
     def remove(self, obj):
-        index = self._children.index(obj)
-        del self._children[index]
+        index = self._list.index(obj)
+        del self._list[index]
 
-    def get_child(self, index):
-        return self._children[index]
+    def get_list(self, index):
+        return self._list[index]
 
 def main():
     pic = Picture()
@@ -54,8 +54,10 @@ def main():
     pic.add(Text())
     pic.draw()
 
-    line = pic.get_child(0)
-    line.draw()
 
 if __name__ == '__main__':
     main()
+
+"""
+Меню сайта
+"""

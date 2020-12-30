@@ -6,6 +6,13 @@ class Human():
     def say(self):
         print(f'Hello! My name is {self._name}')
 
+class Fish():
+    """Class fish"""
+    def __init__(self, name):
+        self._name = name
+
+    def say(self):
+        print(f'Fish name is - {self._name}')
 
 class Plan:
     """Class Plan"""
@@ -20,9 +27,14 @@ class Plan:
 
 def main():
     man = Human('James')
+    fish = Fish('Bob')
     plan = Plan(man)
+    plan.say()
+    plan.fly()
+    plan = Plan(fish)
     plan.say()
     plan.fly()
 
 if __name__ == '__main__':
     main()
+

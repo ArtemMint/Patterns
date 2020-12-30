@@ -68,3 +68,7 @@ if __name__ == "__main__":
 
     print("Client triggers operation D.")
     c2.do_d()
+
+"""
+Кнопка сообщает mediator что нужно провести правильность данных в поле
+"""

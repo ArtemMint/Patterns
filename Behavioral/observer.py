@@ -46,3 +46,7 @@ subject = Subject()
 subject.attach(Observer('Observer 1'))
 subject.attach(Observer('Observer 2'))
 subject.set_data('data about observer')
+
+"""
+Чат, рассылка сообщений
+"""

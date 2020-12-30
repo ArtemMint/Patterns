@@ -1,5 +1,5 @@
 class Memento(object):
-    """Хранитель"""
+    """Memento"""
     def __init__(self, state):
         self._state = state
 
@@ -8,7 +8,7 @@ class Memento(object):
 
 
 class Caretaker(object):
-    """Опекун"""
+    """Caretaker of state"""
     def __init__(self):
         self._memento = None
 
@@ -20,7 +20,7 @@ class Caretaker(object):
 
 
 class Originator(object):
-    """Создатель"""
+    """Originator"""
     def __init__(self):
         self._state = None
 
@@ -49,3 +49,7 @@ if __name__ == '__main__':
 
     originator.restore_state(caretaker.get_memento())
     print ('Originator restore state:', originator.get_state())
+
+"""
+Автосохранение документов / БД
+"""

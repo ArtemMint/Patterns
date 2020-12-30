@@ -1,6 +1,7 @@
 from __future__ import annotations
 from collections.abc import Iterable, Iterator
 from typing import Any, List
+#Iterable - коллекция
 
 
 class AlphabeticalOrderIterator(Iterator):
@@ -8,7 +9,7 @@ class AlphabeticalOrderIterator(Iterator):
     _position: int = None
     _reverse: bool = False
 
-    def __init__(self, collection: WordsCollection, reverse: bool = False) -> None:
+    def __init__(self, collection, reverse: bool = False):
         self._collection = collection
         self._reverse = reverse
         self._position = -1 if reverse else 0
@@ -28,22 +29,14 @@ class AlphabeticalOrderIterator(Iterator):
 
 
 class WordsCollection(Iterable):
-    """
-    Concrete Collections provide one or several methods for retrieving fresh
-    iterator instances, compatible with the collection class.
-    """
 
-    def __init__(self, collection: List[Any] = []) -> None:
+    def __init__(self, collection: List[Any] = []):
         self._collection = collection
 
     def __iter__(self) -> AlphabeticalOrderIterator:
-        """
-        The __iter__() method returns the iterator object itself, by default we
-        return the iterator in ascending order.
-        """
         return AlphabeticalOrderIterator(self._collection)
 
-    def get_reverse_iterator(self) -> AlphabeticalOrderIterator:
+    def get_reverse_iterator(self):
         return AlphabeticalOrderIterator(self._collection, True)
 
     def add_item(self, item: Any):
@@ -62,3 +55,7 @@ if __name__ == "__main__":
 
     print("Reverse traversal:")
     print("\n".join(collection.get_reverse_iterator()), end="")
+
+"""
+Вывести список друзей в соц сети.
+"""
