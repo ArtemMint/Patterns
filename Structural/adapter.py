@@ -1,5 +1,4 @@
 class Number:
-
     def __init__(self):
         self.value = 1.89
 
@@ -7,7 +6,6 @@ class Number:
         return self.value
 
 class String:
-
     def __init__(self):
         self.value = '123'
 
@@ -15,9 +13,9 @@ class String:
         return self.value
 
 class NumberToStringAdapter(Number):
-
     def get(self):
         return str(super().get())
+
 
 def main():
     number = Number()

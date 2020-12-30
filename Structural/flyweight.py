@@ -35,14 +35,16 @@ class Placemark(object):
 def main():
     mark1 = Placemark(-73.237221, 25.714551, 'green')
     mark2 = Placemark(73.617761, 80.755773, 'green')
+    mark3 = Placemark(72.473761, 120.752323, 'red')
+
 
     print(mark1)
     print(mark2)
+    print(mark3)
+
     print(mark1._color is mark2._color)
+    print(mark2._color is mark3._color)
 
 if __name__ == '__main__':
     main()
 
-"""
-Многократное применение
-"""
